@@ -22,11 +22,12 @@ forLoop: 'for' expr1; expr2; expr3
 
 
 //Arithmetic Operators
+ARITH_OP: ( '+' | '-' | '*' | '/' | '%' | '^' );
 
 
 
 // Assignment Operators
-
+ASGNMNT_OP: ( '=' | '+=' | '-=' | '*=' | '/=' | '^=' '%=' );
 
 
 // Conditional Statements
