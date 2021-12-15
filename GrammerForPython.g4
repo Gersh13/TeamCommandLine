@@ -5,9 +5,13 @@ grammer GrammerForPython;
 
 
 // If/else block
+if: 'if' '(' control_expression ')'
+         then_clause;
+         
 ifElse: 'if' '(' control_expression ')'
-        then_clause
-        else_clause;
+              then_clause
+         'elif' '(' control_expression ')'
+               else_clause;
 
 
 //Variables Definitions
