@@ -32,6 +32,12 @@ forLoop: 'for' expr1; expr2; expr3
 // Conditional Statements
 CONDSTAT: '<' | '<=' | '>' | '>=' | '==' | '!=';
 
+// Endline/Newline
+ENLINE: '\r' ? '\n' | '\r';
+
+// Whitespaces
+WS: [ \r\n\t] + -> skip;
+
 // Comments
 COMMENTS: '#' ~( '\r' | '\n' )*;
 
