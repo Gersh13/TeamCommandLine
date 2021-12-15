@@ -5,7 +5,7 @@ grammer GrammerForPython;
 
 
 // If/else block
-ifElse: 'if' control_expression
+ifElse: 'if' '(' control_expression ')'
         then_clause
         else_clause;
 
@@ -15,10 +15,11 @@ ifElse: 'if' control_expression
 
 
 // While and For Loops
-while: 'while' control_expression body
+while: 'while' '(' control_expression ')' 
+        body;
         
-forLoop: 'for' expr1; expr2; expr3
-          statement
+forLoop: 'for' expr1 'in' list
+          statement;
 
 
 //Arithmetic Operators
@@ -34,11 +35,4 @@ forLoop: 'for' expr1; expr2; expr3
 
 //...
 
-
-//Rules
-
-If: 'if';
-Else: 'else';
-While: 'while';
-For: 'for';
 
