@@ -30,7 +30,7 @@ forLoop: 'for' expr1; expr2; expr3
 
 
 // Conditional Statements
-CONDSTAT: '<' | '<=' | '>' | '>=' | '==' | '!=';
+CONDSTAT: '<' | '<=' | '>' | '>=' | '==' | '!=' | 'and' | 'or' | 'not' ;
 
 // Endline/Newline
 ENLINE: '\r' ? '\n' | '\r';
