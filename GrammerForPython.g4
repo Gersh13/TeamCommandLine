@@ -1,13 +1,19 @@
 grammer GrammerForPython;
 
 
-
-
-
 // If/else block
-ifElse: 'if' control_expression
-        then_clause
-        else_clause;
+// Python If: if(...):
+
+if: 'if' '(' control_expression ')' ':'
+         then_clause;
+         
+//if(...):
+//elif(...):
+
+ifElse: 'if' '(' control_expression ')' ':'
+              then_clause
+         'elif' '(' control_expression ')' ':'
+               else_clause;
 
 
 //Variables Definitions
@@ -15,10 +21,14 @@ ifElse: 'if' control_expression
 
 
 // While and For Loops
-while: 'while' control_expression body
+//while(...):
+while: 'while' '(' control_expression ')' ':'
+        body;
         
-forLoop: 'for' expr1; expr2; expr3
-          statement
+        
+//for x in ... :
+forLoop: 'for' expr1 'in' list ':'
+          statement;
 
 
 //Arithmetic Operators
@@ -46,9 +56,5 @@ COMMENTS: '#' ~( '\r' | '\n' )*;
 
 
 //Rules
-
-If: 'if';
-Else: 'else';
-While: 'while';
-For: 'for';
+INT: [0-9]+ ;
 
