@@ -6,24 +6,25 @@ import java.io.IOException;
 import static org.antlr.v4.runtime.CharStreams.fromFileName;
 
 
+
 public class mainStart {
     public static void main(String[] args) {
         try {
             String py_file = "src/python_test_code.py";
-          
+
             CharStream charStrm = fromFileName(py_file);
-          
-            GrammerForPythonLexer lexer = new GrammerForPythonLexer(charStrm);
-          
+
+            grammarForPythonLexer lexer = new grammarForPythonLexer(charStrm);
+
             CommonTokenStream token = new CommonTokenStream(lexer);
-          
-            GrammerForPythonParser parser = new gParser(token);
-          
+
+            grammarForPythonParser parser = new grammarForPythonParser(token);
+
             ParseTree tree = parser.start();
 
-            MyVisitor visitor = new MyVisitor();
-          
-            visitor.visit(tree);
+            grammarControl control = new grammarControl();
+
+            control.visit(tree);
         }
         catch(IOException e) {
             e.printStackTrace();
