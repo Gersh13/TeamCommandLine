@@ -3,7 +3,7 @@
 
 ### Project Explanation
 
-We created a Python interpreter using Java and ANTLR. From ANTLR's website, "ANTLR (ANother Tool for Language Recognition) is a powerful parser generator for reading, processing, executing, or translating structured text or binary files. It's widely used to build languages, tools, and frameworks. From a grammar, ANTLR generates a parser that can build and walk parse trees."
+Implemented a parser for Python language by using Context-free Grammar (CFG) with ANTLR. We created a Python interpreter using Java and ANTLR. ANTLR generates a parser that builds and walk parse trees from grammer. This is not a complete parser and will only include basic features. Expected Features: if/else blocks, variable definitions, while and for loops, Arithmetic operators, assignment operators, and conditional statements. 
 
 ### Team Members & GitHub Alias
 
