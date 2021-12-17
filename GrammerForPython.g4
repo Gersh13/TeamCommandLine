@@ -41,13 +41,13 @@ expr:
 VARS: [a-zA-Z_][a-zA-Z0-9_]*;
 
 // Integers (Be sure to check for Unary vs Negative)
-INT: '-' ? [0-9]+;
+INTEGER: '-' ? [0-9]+;
 
 // Floats (Be sure to check for Unary vs Negative)
-FLT: '-' ? ([0-9]*[.]) ? [0-9]+;
+FLOAT: '-' ? ([0-9]*[.]) ? [0-9]+;
 
 // Strings
-STR: '"' ('\\' ["\\] | ~["\\\r\n])* '"';
+STRING: '"' ('\\' ["\\] | ~["\\\r\n])* '"';
 
 // Tab Spacings
 TAB: ('\t'|'    ');
