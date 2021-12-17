@@ -31,3 +31,16 @@ Implemented a parser for Python language by using Context-free Grammar (CFG) wit
 2. Next we need to add the ANTLR plugin. Press the "IntelliJ IDEA" at the top left and go down to preferences and select it, and then plugins on the new pop up window.
 4. Search "ANTLR v4 Plugin" and install it. Once installed we can close out of the pop up.
 5. Now we need to drag the unzipped repo (use your finder) into the location of where this project was made.
+6. Go back to IntelliJ and go to the project folder. If it hasn't updated you can refresh by right cicking and pressing reload from disk.
+7. Right click onto our grammarForPython.g4 file, select "Configure ANTLR". Click on the input field for the "Output directory where all output is generated" and input "src". You can close out now of the antlter pop up.
+8. Now price file at the top bar of IntelliJ, go to project structure, then on the pop up select modules.
+9. Select the plus sign and then Jars or Directories, and when the explorer opens you just have to grab the antlr jar that you downloaded earlier. Apply this then close out.
+
+
+### Running our code
+1. If the puthon_test_code.py is correct, you can right click our grammarForPython.g4 file and sekect the "Generate ANTLR Recognizer: and it will generate all of the lexer and parser files. 
+2. You run by right clicking on our mainStart.java file and clicking "Run mainStart.main()"
+
+
+We got the .g4 file working but couldnt get eveything to link correctly. 
+Spent a ton of time on it but couldnt figure it out, Please go easy on us. Checking the G4 seems like everything is there.
