@@ -1,5 +1,7 @@
 grammer GrammerForPython;
 
+start: (statement | EOL)*;
+
 
 
 
@@ -16,6 +18,9 @@ statement: controlExpr=expr
          | vars=VARS asgnmnt=ASGNMNT controlExpr=expr
          | vars=VARS EQUAL controlExpr=expr
          | CRTCOMMENTS;
+
+stmntField: INDENT (stat=statement EOL*)+ DEDENT;
+
 
 
 expr: 
