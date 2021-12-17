@@ -53,12 +53,13 @@ CONDIT: '<'|'<='|'>'|'>='|'=='|'!='|'and'|'or'|'not';
 WS: [ \r\n\t] + -> skip;
 
 // Comments
-COMMENTS: '#' ~( '\r' | '\n' )*;
+//COMMENTS: '#' ~( '\r' | '\n' )*;
 
 //...
 
 //Rules
-// Colons
+
+//  Colons
 ENDCOLONS: ':';
 
 // End of Lines
