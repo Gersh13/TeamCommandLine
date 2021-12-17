@@ -13,9 +13,9 @@ statement: controlExpr=expr
 
 expr: 
     | var=VARS                                  #variables expression
-    | atom=INTEGER                              #int expression 
-    | atom=FLOAT                                #float expression
-    | atom=STRING                               #string expression
+    | atom=INT                              #int expression 
+    | atom=FLT                                #float expression
+    | atom=STR                               #string expression
     | 'str(' exp=expr ')'                       #convert to a string 
     | 'int('exp=expr')'                         #convert to an int
     | 'break'                                   #thebreak statment 
@@ -40,6 +40,18 @@ expr:
 //Variables Definitions
 VARS: [a-zA-Z_][a-zA-Z0-9_]*;
 
+// Integers (Be sure to check for Unary vs Negative)
+INT: '-' ? [0-9]+;
+
+// Floats (Be sure to check for Unary vs Negative)
+FLT: '-' ? ([0-9]*[.]) ? [0-9]+;
+
+// Strings
+STR: '"' ('\\' ["\\] | ~["\\\r\n])* '"';
+
+// Tab Spacings
+TAB: ('\t'|'    ');
+
 
 // While and For Loops
 
@@ -49,17 +61,25 @@ VARS: [a-zA-Z_][a-zA-Z0-9_]*;
 ARTHMT: '+'|'-'|'/'|'*'|'^'|'%';
 
 
-
-
-
 // Assignment Operators
 ASGNMNT: '+='|'-='|'*='|'/='|'^='|'%=';
 
 
 // Conditional Statements
-CONDIT: '<'|'<='|'>'|'>='|'=='|'!=';
+CONDIT: '<'|'<='|'>'|'>='|'=='|'!='|'and'|'or'|'not';
+
+
+// Whitespaces
+WS: [ \r\n\t] + -> skip;
+
+// Comments
+COMMENTS: '#' ~( '\r' | '\n' )*;
 
 //...
 
+// Colons
 ENDCOLONS: ':';
+
+// End of Lines
 ENLINE: '\r' ? '\n' | '\r';
+
