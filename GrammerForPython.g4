@@ -17,18 +17,18 @@ grammer GrammerForPython;
 
 
 //Arithmetic Operators
-ARTH: '+'|'-'|'/'|'*'|'^'|'%';
+ARTHMT: '+'|'-'|'/'|'*'|'^'|'%';
 
 
 
 
 
 // Assignment Operators
-ASSIGNMENT: '+='|'-='|'*='|'/='|'^='|'%=';
+ASGNMNT: '+='|'-='|'*='|'/='|'^='|'%=';
 
 
 // Conditional Statements
-CNDL: '<'|'<='|'>'|'>='|'=='|'!=';
+CONDIT: '<'|'<='|'>'|'>='|'=='|'!=';
 
 //...
 
